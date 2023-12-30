@@ -8,14 +8,17 @@ Original file is located at
 """
 
 class Human:
-  def __init__(self, name, age):
+  def __init__(self):
+    self.name = ""
+
+  def setinfo(self, name, age):
     self.name = name
-    self.age = age
+    self.age = 10
 
-human = Human("はな", 10)
+  def printinfo(self):
+    print(f"名前：{self.name}")
+    print(f"年齢：{self.age}")
 
-def printinfo(human):
-  print(f"名前：{human.name}")
-  print(f"年齢：{human.age}")
-
-printinfo(human)
+human = Human()
+human.setinfo("はな", 10)
+human.printinfo()
